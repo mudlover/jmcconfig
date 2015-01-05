@@ -1,0 +1,33 @@
+#message variable OFF
+#message uses OFF
+#multiaction off
+#multihighlight off
+#presub on
+#echo off
+#ignore off
+#speedwalk on
+#togglesubs off
+#verbat off
+#colon leave
+#comment #
+#race format %0
+#variable {accountname} {јндрейјндрей}
+#variable {charactername} {“элен}
+#variable {passwordtype} {character}
+#hot {NUM7} {вверх} {glob}
+#hot {NUM8} {север} {adan}
+#hot {NUM9} {вниз} {adan}
+#hot {MIN} {зачитать свиток.возврата;инв} {adan}
+#hot {NUM4} {запад} {adan}
+#hot {NUM5} {scan} {adan}
+#hot {NUM6} {восток} {adan}
+#hot {NUM2} {юг} {adan}
+#hot {Ctrl+A} {парировать} {adan}
+#hot {Ctrl+S} {героический} {adan}
+#hot {Ctrl+D} {сбить} {adan}
+#hot {Ctrl+C} {оглуш} {adan}
+#hot {Ctrl+NUM5} {встать} {adan}
+#use {jmcbots\\jmcbots.js}
+#use {passwords\\passwords.js}
+#group local default
+#ticksize 60
