@@ -1,0 +1,6 @@
+ttcoreex.bat
+*.dll
+changelog.txt
+history.dat
+jmc.exe
+logs/
