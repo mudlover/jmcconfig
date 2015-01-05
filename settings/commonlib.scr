@@ -60,3 +60,29 @@ function sendPassword() {
   jmc.Parse("#daa " + password);
   return true;
 }
+
+function include(filename) {
+  var fso = null,
+    stream = null,
+    file = "";
+
+  fso = new ActiveXObject("Scripting.FileSystemObject");
+  if (!fso) {
+    return false;
+  }
+
+  stream = fso.OpenTextFile(filename, 1 /* ForReading */);
+  if (!stream) {
+    return false;
+  }
+
+  file = stream.ReadAll();
+  stream.close();
+
+  if (!file) {
+    return;
+  }
+
+  jmc.Eval(file);
+  return true;
+}
