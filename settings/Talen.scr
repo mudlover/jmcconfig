@@ -26,6 +26,13 @@ function onUnload() {
   }
 }
 
+function onInput() {
+  if (JmcBots) {
+    JmcBots.onInput(jmc.Event);
+  }  
+}
+
+jmc.RegisterHandler("Input", "onInput()");
 jmc.RegisterHandler("Unload", "onUnload()");
 jmc.RegisterHandler("Timer", "onTimer()");
 jmc.RegisterHandler("PreTimer", "onTimer()");
