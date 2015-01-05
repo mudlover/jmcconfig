@@ -29,7 +29,6 @@
 #hot {Ctrl+D} {сбить} {adan}
 #hot {Ctrl+C} {оглуш} {adan}
 #hot {Ctrl+NUM5} {встать} {adan}
-#use {jmcbots\\jmcbots.js}
 #use {passwords\\passwords.js}
 #group local default
 #ticksize 60
