@@ -14,6 +14,8 @@
 #variable {accountname} {АндрейАндрей}
 #variable {charactername} {Тэлен}
 #variable {passwordtype} {character}
+#variable {recallcheck} {0}
+#variable {recalls} {0}
 #hot {NUM7} {вверх} {glob}
 #hot {NUM8} {север} {adan}
 #hot {NUM9} {вниз} {adan}
