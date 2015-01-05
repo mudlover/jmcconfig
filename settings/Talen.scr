@@ -1,19 +1,32 @@
-var botNum = 1,
-  botRole = "master",
-  timerHook = null,
+var timerHook = null,
   JmcBotsRegistered = false;
 
 function onTimer() {
   if (!JmcBotsRegistered && JmcBots) {
-    JmcBots.register(botNum, botRole);
-    timerHook = JmcBots.onTimer;
+    var rc = false;
+    
+    rc = JmcBots.register(0, JmcBots.ROLE.MASTER);
+    if (!rc) {
+      showErr("Unable to initialize JmcBots");
+    } else {
+      timerHook = JmcBots.onTimer;
+    }
+
     JmcBotsRegistered = true;    
   }
+
   if (timerHook && (jmc.Event === 1 || jmc.Event === 2)) {
     timerHook();
   }
 }
 
+function onUnload() {
+  if (JmcBots) {
+    JmcBots.onUnload();
+  }
+}
+
+jmc.RegisterHandler("Unload", "onUnload()");
 jmc.RegisterHandler("Timer", "onTimer()");
 jmc.RegisterHandler("PreTimer", "onTimer()");
 jmc.SetTimer(1, 1, 1);
