@@ -1,44 +1,5 @@
-var timerHook = null,
-  JmcBotsRegistered = false;
+include("settings\\jmcbots\\jmcbots.js");
 
-function onTimer() {
-  if (!JmcBotsRegistered && JmcBots) {
-    var rc = false;
-    
-    rc = JmcBots.register(0, JmcBots.ROLE.MASTER);
-    if (!rc) {
-      showErr("Unable to initialize JmcBots");
-    } else {
-      timerHook = JmcBots.onTimer;
-    }
-
-    JmcBotsRegistered = true;    
-  }
-
-  if (timerHook && (jmc.Event === 1 || jmc.Event === 2)) {
-    timerHook();
-  }
-}
-
-function onUnload() {
-  if (JmcBots) {
-    JmcBots.onUnload();
-  }
-}
-
-function onInput() {
-  if (JmcBots) {
-    JmcBots.onInput(jmc.Event);
-  }  
-}
-
-jmc.RegisterHandler("Input", "onInput()");
-jmc.RegisterHandler("Unload", "onUnload()");
-jmc.RegisterHandler("Timer", "onTimer()");
-jmc.RegisterHandler("PreTimer", "onTimer()");
-jmc.SetTimer(1, 1, 1);
-
-var rc = include("settings\\jmcbots\\jmcbots.js");
-if (!rc) {
-  showErr("Cannot include jmcbots");
+function initJmcBots() {
+  JmcBots.register(0 /* Num */, 1 /* Master */, true /* Register handlers */);
 }
