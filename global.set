@@ -11,5 +11,6 @@
 #highlight {light green,b black} {^свиток возврата} {adan}
 #highlight {light green} {^свиток возврата%0} {adan}
 #group global adan
+#group disable adanlogin
 #group global adanlogin
 #group global glob
