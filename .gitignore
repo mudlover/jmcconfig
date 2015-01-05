@@ -6,3 +6,5 @@ jmc.exe
 jmc.ini
 language.ini
 logs/
+*.sublime-project
+*.sublime-workspace
