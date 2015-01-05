@@ -1,0 +1,62 @@
+function showErr(str) {
+  jmc.ShowMe("ERROR: " + str, "light red");
+}
+
+function sendPassword() {
+  var passwordType = '',
+    passwordKey = '',
+    password = '';
+
+  if (!Passwords) {
+    // You should have the following object in your global scope:
+    // Passwords = {
+    //   'account': {
+    //     '<accname>': '<password>'
+    //     // , ...
+    //   },
+    //   'character': {
+    //     '<charname>': '<password>'
+    //     // , ...
+    //   }
+    // };
+    showErr("Cannot send password, Passwords dict does not exist. Check if you have created password storage");
+    return false;
+  }
+
+  passwordType = jmc.GetVar("passwordtype");
+  if (!passwordType) {
+    showErr("Cannot send password, password type is not set");
+    return false;
+  }
+ 
+  if (!Passwords[passwordType]) { 
+    showErr("Cannot send password, Passwords have no password type '" +  passwordType + "'");
+    return false;
+  }
+
+  switch(passwordType) {
+    case "account":
+      passwordKey = jmc.GetVar('accountname');
+      break;
+    case "character":
+      passwordKey = jmc.GetVar('charactername');
+      break;
+    default:
+      showErr("Cannot send password, unknown password type '" + passwordType + "'")
+      return false;
+  }
+
+  if (!passwordKey) {
+    showErr("Cannot send password, no password key is set");
+    return false;    
+  }
+
+  password = Passwords[passwordType][passwordKey];
+  if (!password) {
+    showErr("Cannot send password, no password key is set");    
+    return false;    
+  }
+  
+  jmc.Parse("#daa " + password);
+  return true;
+}
