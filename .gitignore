@@ -3,4 +3,6 @@ ttcoreex.bat
 changelog.txt
 history.dat
 jmc.exe
+jmc.ini
+language.ini
 logs/
