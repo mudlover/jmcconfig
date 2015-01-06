@@ -86,20 +86,3 @@ function include(filename) {
   jmc.Eval(file);
   return true;
 }
-
-function initRoleGroups(role) {
-  jmc.Parse("#group disable master");
-  jmc.Parse("#group disable slave");
-
-  switch(role) {
-    case "master":
-      jmc.Parse("#group enable master");
-      break;
-    case "slave":
-      jmc.Parse("#group enable slave");
-      break;
-    default:
-      showErr("Unknown role '" + role + "'");
-      break;
-  }
-}
