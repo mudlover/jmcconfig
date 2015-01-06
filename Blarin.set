@@ -16,7 +16,6 @@
 #variable {passwordtype} {character}
 #variable {recallcheck} {0}
 #variable {recalls} {0}
-#hot {ESC} {default}
 #hot {NUM7} {вверх} {glob}
 #hot {NUM8} {север} {adan}
 #hot {NUM9} {вниз} {adan}
