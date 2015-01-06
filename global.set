@@ -16,5 +16,6 @@
 #group global adan
 #group global adanlogin
 #group global glob
+#group disable master
 #group global master
 #group global slave

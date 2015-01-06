@@ -3,5 +3,5 @@ include("settings\\jmcbots\\jmcbots.js");
 function init() {
   var role = "master";
   initRoleGroups(role);
-  JmcBots.register(0 /* Num */, role, true /* Register handlers */);
+  JmcBots.register(1 /* Num */, role, jmc.GetVar("charactername"), true /* Register handlers */);
 }
