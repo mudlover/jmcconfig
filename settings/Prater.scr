@@ -1,0 +1,5 @@
+include("settings\\jmcbots\\jmcbots.js");
+
+function initJmcBots() {
+  JmcBots.register(2 /* Num */, 2 /* Slave */, true /* Register handlers */);
+}
