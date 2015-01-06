@@ -19,7 +19,6 @@
 #hot {NUM7} {вверх} {glob}
 #hot {NUM8} {север} {adan}
 #hot {NUM9} {вниз} {adan}
-#hot {MIN} {зачитать свиток.возврата;инв} {adan}
 #hot {NUM4} {запад} {adan}
 #hot {NUM5} {scan} {adan}
 #hot {NUM6} {восток} {adan}
@@ -28,6 +27,7 @@
 #hot {Ctrl+S} {героический} {adan}
 #hot {Ctrl+D} {сбить} {adan}
 #hot {Ctrl+C} {оглуш} {adan}
+#hot {Ctrl+MIN} {зачитать свиток.возврата;инв} {adan}
 #hot {Ctrl+NUM5} {встать} {adan}
 #use {passwords\\passwords.js}
 #group local default
