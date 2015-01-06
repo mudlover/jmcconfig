@@ -3,7 +3,7 @@
 #alias {ккк} {#connect adan.ru 4000} {adan}
 #alias {сби} {1сбить %1} {master}
 #action {^свиток возврата [%1]} {#if {$recallcheck>0}{#math {recalls} {$recalls+%1}}} {4} {adan}
-#action {^Welcome to AdamantMUD} {#group enable adan; #group enable adanlogin; #log C:\\Users\\Andrey\\SkyDrive\\Documents\\JMC\\logs\\adan-$charactername-$DATE-$accountname.html; #script if(initChar){initChar()); 5} {5} {glob}
+#action {^Welcome to AdamantMUD} {#group enable adan; #group enable adanlogin; #log C:\\Users\\Andrey\\SkyDrive\\Documents\\JMC\\logs\\adan-$charactername-$DATE-$accountname.html; #script if(initChar)initChar(); 5} {5} {glob}
 #action {^Введите имя своего аккаунта, или "новый" для создания нового:} {$accountname; #var passwordtype account} {5} {adan}
 #action {^Пароль:} {#script sendPassword()} {5} {adan}
 #action {^Введите имя персонажа (русскими буквами) или "новый" для создания нового:} {$charactername; #var passwordtype character} {5} {adan}
