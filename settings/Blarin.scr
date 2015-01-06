@@ -1,5 +1,7 @@
 include("settings\\jmcbots\\jmcbots.js");
 
-function initJmcBots() {
-  JmcBots.register(0 /* Num */, 1 /* Master */, true /* Register handlers */);
+function init() {
+  var role = "master";
+  initRoleGroups(role);
+  JmcBots.register(0 /* Num */, role, true /* Register handlers */);
 }
