@@ -11,12 +11,18 @@
 #colon leave
 #comment #
 #race format %0
+#variable {__input} {$INPUT}
 #variable {accountname} {јндрейјндрей}
 #variable {charactername} {Ѕлейрин}
+#variable {input} {asdasasd}
 #variable {passwordtype} {character}
 #variable {recallcheck} {0}
 #variable {recalls} {0}
-#hot {NUM7} {вверх} {glob}
+#hot {F5} {спас1} {adan}
+#hot {F6} {спас2} {adan}
+#hot {F7} {спас3} {adan}
+#hot {F8} {спас4} {adan}
+#hot {NUM7} {вверх} {adan}
 #hot {NUM8} {север} {adan}
 #hot {NUM9} {вниз} {adan}
 #hot {NUM4} {запад} {adan}
@@ -26,10 +32,11 @@
 #hot {Shift+NUM5} {все пом} {adan}
 #hot {Ctrl+A} {парировать} {adan}
 #hot {Ctrl+S} {героический} {adan}
-#hot {Ctrl+D} {сбить} {adan}
+#hot {Ctrl+D} {сби} {adan}
 #hot {Ctrl+C} {оглуш} {adan}
 #hot {Ctrl+MIN} {зачитать свиток.возврата;инв} {adan}
 #hot {Ctrl+NUM5} {встать} {adan}
+#hot {Ctrl+Shift+D} {#script JmcBots.runWithInput("сби")} {adan}
 #use {passwords\\passwords.js}
 #group local default
 #ticksize 60

@@ -2,5 +2,5 @@ include("settings\\jmcbots\\jmcbots.js");
 
 function init() {
   var role = "master";
-  JmcBots.init(1 /* Num */, role, jmc.GetVar("charactername"), true /* Register handlers */);
+  JmcBots.init(1 /* Num */, role, "adan", true /* Register handlers */);
 }
