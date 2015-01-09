@@ -42,7 +42,7 @@ function sendPassword() {
       passwordKey = jmc.GetVar('charactername');
       break;
     default:
-      showErr("Cannot send password, unknown password type '" + passwordType + "'")
+      showErr("Cannot send password, unknown password type '" + passwordType + "'");
       return false;
   }
 
@@ -86,4 +86,3 @@ function include(filename) {
   jmc.Eval(file);
   return true;
 }
-

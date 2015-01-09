@@ -11,7 +11,10 @@
 #colon leave
 #comment #
 #race format %0
-#variable {__input} {$INPUT}
+#action {%1 сказал%2 группе: "%3"} {#woutput 1 {light cyan}{%1: %3}} {5} {default}
+#variable {__autoassistEnabled} {True}
+#variable {__autorescueEnabled} {True}
+#variable {__input} {гус}
 #variable {accountname} {јндрейјндрей}
 #variable {charactername} {Ѕлейрин}
 #variable {input} {asdasasd}
@@ -36,7 +39,15 @@
 #hot {Ctrl+C} {оглуш} {adan}
 #hot {Ctrl+MIN} {зачитать свиток.возврата;инв} {adan}
 #hot {Ctrl+NUM5} {встать} {adan}
-#hot {Ctrl+Shift+D} {#script JmcBots.runWithInput("сби")} {adan}
+#hot {Ctrl+Shift+Q} {вее} {default}
+#hot {Ctrl+Shift+W} {#script JmcBots.parseWithPrompt("мет")} {default}
+#hot {Ctrl+Shift+E} {#script JmcBots.parseWithPrompt("гер")} {default}
+#hot {Ctrl+Shift+R} {#script JmcBots.parseWithPrompt("подрез")} {default}
+#hot {Ctrl+Shift+T} {#script JmcBots.parseWithPrompt("овы")} {default}
+#hot {Ctrl+Shift+A} {#script JmcBots.parseWithPrompt("овы")} {default}
+#hot {Ctrl+Shift+S} {#script JmcBots.parseWithPrompt("оглу")} {default}
+#hot {Ctrl+Shift+D} {#script JmcBots.parseWithPrompt("сби")} {adan}
+#hot {Ctrl+Shift+NUM5} {4вста} {default}
 #use {passwords\\passwords.js}
 #group local default
 #ticksize 60

@@ -11,7 +11,7 @@
 #colon leave
 #comment #
 #race format %0
-#variable {__autoassistEnabled} {False}
+#variable {__autoassistEnabled} {True}
 #variable {accountname} {АндрейАндрей}
 #variable {charactername} {Пратер}
 #variable {passwordtype} {character}

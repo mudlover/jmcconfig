@@ -1,6 +1,10 @@
 include("settings\\jmcbots\\jmcbots.js");
 
 function init() {
-  var role = "slave";
-  JmcBots.init(2 /* Num */, role, "adan", true /* Register handlers */);
+  JmcBots.init({
+    num: 2, 
+    role: "slave",
+    mudName: "adan", 
+    initHandlers: true
+  });
 }
